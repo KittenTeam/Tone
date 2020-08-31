@@ -1,6 +1,6 @@
 {
-  "name": "tone",
-  "version": "13.8.0",
+  "name": "@cmao/codemao-tone",
+  "version": "1.0.0",
   "description": "A Web Audio framework for making interactive music in the browser.",
   "main": "build/Tone.js",
   "files": [
@@ -23,6 +23,7 @@
     "lint": "eslint Tone/*/*.js",
     "lint:fix": "eslint Tone/*/*.js --fix",
     "scratch": "webpack -w --env.scratch --mode=development",
+    "prepack": "npm run lint && npm run build",
     "test": "npm run collect:tests && npm run karma",
     "test:watch": "npm run collect:tests && npm run karma:watch",
     "test:browser": "npm run collect:tests && concurrently \"webpack -w --mode=development --env.test\" \"http-server -p 9090 -c-1\" \"open http://localhost:9090/build/test.html\"",
@@ -64,6 +65,7 @@
     "glob": "^7.1.2",
     "html-webpack-plugin": "^3.2.0",
     "http-server": "^0.11.1",
+    "husky": "^4.2.5",
     "istanbul-instrumenter-loader": "^3.0.1",
     "jsdoc": "^3.6.2",
     "karma": "^4.1.0",
