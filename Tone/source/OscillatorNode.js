@@ -3,7 +3,8 @@ import "../core/Buffer";
 import "../source/Source";
 import "../core/Gain";
 import "../core/AudioNode";
-import "../shim/OscillatorNode";
+// No need for this.Cause it makes bug in Safari 14 and we won't use this function.
+// import "../shim/OscillatorNode";
 
 /**
  *  @class Wrapper around the native fire-and-forget OscillatorNode. Adds the
